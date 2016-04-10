@@ -15,7 +15,7 @@ import fuel.util.TRandom
   * the input stream may remain intact).
   *
   */
-trait SearchOperator[S] extends (Stream[S] => (List[S], Stream[S]))
+trait SearchOperator[S] extends (Stream[S] => (List[S], Stream[S])) with Serializable
 
 class SearchOperator1[S](body: S => S,
                          isFeasible: S => Boolean = (_: S) => true)
