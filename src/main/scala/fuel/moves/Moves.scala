@@ -10,7 +10,7 @@ import fuel.func.SearchOperator
  *  also a move (indeed it is, a move from nowhere to S: Unit => S).  
  *  
  */
-trait Moves[S] extends Seq[SearchOperator[S]]{
+trait Moves[S] extends Seq[SearchOperator[S]] with Serializable {
   def newSolution: S
   protected def moves: Seq[SearchOperator[S]]
 
